@@ -1,0 +1,1 @@
+export POX_CORE_DIR=/home/mininet/geni-viro/pox/

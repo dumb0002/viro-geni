@@ -1,0 +1,67 @@
+=====================================================================================
+          =================== ARP-TESTING ===========================
+=====================================================================================
+
+NXST_FLOW reply (xid=0x4):
+ cookie=0x0, duration=197.068s, table=0, n_packets=697, n_bytes=23802, idle_age=0, priority=1 actions=resubmit(,1)
+ cookie=0x0, duration=294.23s, table=0, n_packets=35, n_bytes=3710, idle_age=160, viro,viro_dst_sw=0x000004,viro_dst_host=0x04 actions=viro_pop_fd,mod_dl_dst:e8:9d:87:cd:31:30,output:1
+ cookie=0x0, duration=159.258s, table=0, n_packets=3, n_bytes=318, idle_age=156, viro,viro_dst_sw=0x000004,viro_dst_host=0x05 actions=viro_pop_fd,mod_dl_dst:e8:9d:87:cd:31:30,output:1
+ cookie=0x0, duration=188603.963s, table=0, n_packets=36, n_bytes=3816, idle_age=65534, hard_age=65534, viro,viro_dst_sw=0x000004,viro_dst_host=0x02 actions=viro_pop_fd,mod_dl_dst:e8:9d:87:cd:31:30,output:1
+ cookie=0x0, duration=238467.8s, table=0, n_packets=20696, n_bytes=28986172, idle_age=65534, hard_age=65534, viro,viro_dst_sw=0x000004,viro_dst_host=0x01 actions=viro_pop_fd,mod_dl_dst:e8:9d:87:cd:31:30,output:1
+ cookie=0x0, duration=6289.908s, table=0, n_packets=42, n_bytes=14364, idle_age=175, priority=20,udp,tp_src=68,tp_dst=67 actions=controller(id=1)
+ cookie=0x0, duration=6289.908s, table=0, n_packets=503, n_bytes=30180, idle_age=54, priority=20,arp actions=controller(id=1)
+ cookie=0x0, duration=197.068s, table=0, n_packets=0, n_bytes=0, idle_age=197, priority=10,ip actions=controller(id=2),ANY
+ cookie=0x0, duration=495.681s, table=0, n_packets=69, n_bytes=6762, idle_age=156, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:09 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x3,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0x9,resubmit(,1)
+ cookie=0x0, duration=181729.888s, table=0, n_packets=36825, n_bytes=2628262, idle_age=65534, hard_age=65534, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:04 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x1,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0x4,resubmit(,1)
+ cookie=0x0, duration=179455.636s, table=0, n_packets=3640, n_bytes=258284, idle_age=65534, hard_age=65534, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:05 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x1,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0x5,resubmit(,1)
+ cookie=0x0, duration=238467.864s, table=0, n_packets=327, n_bytes=32046, idle_age=65534, hard_age=65534, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:02 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x1,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0x2,resubmit(,1)
+ cookie=0x0, duration=238482.905s, table=0, n_packets=197, n_bytes=39506, idle_age=48, hard_age=65534, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=01:00:5e:00:00:fb actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x1,viro_set_vid_sw_dst:0x1005e00,viro_set_vid_host_dst:0xfb,resubmit(,1)
+ cookie=0x0, duration=238481.887s, table=0, n_packets=274, n_bytes=20656, idle_age=59, hard_age=65534, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=11:22:33:44:55:66 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x1,viro_set_vid_sw_dst:0x11223344,viro_set_vid_host_dst:0x5566,resubmit(,1)
+ cookie=0x0, duration=238483.019s, table=0, n_packets=16, n_bytes=960, idle_age=175, hard_age=65534, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=01:00:5e:00:00:16 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x1,viro_set_vid_sw_dst:0x1005e00,viro_set_vid_host_dst:0x16,resubmit(,1)
+ cookie=0x0, duration=182686.107s, table=0, n_packets=42797, n_bytes=3117858, idle_age=65534, hard_age=65534, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:03 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x1,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0x3,resubmit(,1)
+ cookie=0x0, duration=237644.61s, table=0, n_packets=2329, n_bytes=178230, idle_age=65534, hard_age=65534, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:01 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x1,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0x1,resubmit(,1)
+ cookie=0x0, duration=187.052s, table=1, n_packets=12, n_bytes=1176, idle_age=156, priority=15,ip,dl_dst=00:00:00:05:00:00/ff:ff:ff:ff:00:00 actions=output:4
+ cookie=0x0, duration=197.068s, table=1, n_packets=669, n_bytes=18573, idle_age=0, priority=10,viro actions=controller(id=2),ANY
+ cookie=0x0, duration=187.09s, table=1, n_packets=0, n_bytes=0, idle_age=187, priority=15,viro,viro_dst_sw=0x000005 actions=output:4
+
+
+
+
+
+============================================================================================
+       ===================== File Downloading Test ==========================
+============================================================================================
+NXST_FLOW reply (xid=0x4):
+ cookie=0x0, duration=3094.517s, table=0, n_packets=10619, n_bytes=298553, idle_age=1, priority=1 actions=resubmit(,1)
+ cookie=0x0, duration=7803.691s, table=0, n_packets=11, n_bytes=1166, idle_age=7471, viro,viro_dst_sw=0x000004,viro_dst_host=0x05 actions=viro_pop_fd,mod_dl_dst:e8:9d:87:cd:31:30,output:1
+ cookie=0x0, duration=246112.233s, table=0, n_packets=20696, n_bytes=28986172, idle_age=65534, hard_age=65534, viro,viro_dst_sw=0x000004,viro_dst_host=0x01 actions=viro_pop_fd,mod_dl_dst:e8:9d:87:cd:31:30,output:1
+ cookie=0x0, duration=7467.117s, table=0, n_packets=31, n_bytes=3583, idle_age=7108, viro,viro_dst_sw=0x000004,viro_dst_host=0x06 actions=viro_pop_fd,mod_dl_dst:e8:9d:87:cd:31:30,output:1
+ cookie=0x0, duration=6932.201s, table=0, n_packets=16, n_bytes=1696, idle_age=6734, viro,viro_dst_sw=0x000004,viro_dst_host=0x08 actions=viro_pop_fd,mod_dl_dst:e8:9d:87:cd:31:30,output:1
+ cookie=0x0, duration=4558.406s, table=0, n_packets=82, n_bytes=115256, idle_age=4549, viro,viro_dst_sw=0x000004,viro_dst_host=0x11 actions=viro_pop_fd,mod_dl_dst:e8:9d:87:cd:31:30,output:1
+ cookie=0x0, duration=5214.478s, table=0, n_packets=387, n_bytes=548966, idle_age=5110, viro,viro_dst_sw=0x000004,viro_dst_host=0x0d actions=viro_pop_fd,mod_dl_dst:e8:9d:87:cd:31:30,output:1
+ cookie=0x0, duration=7938.663s, table=0, n_packets=35, n_bytes=3710, idle_age=7804, viro,viro_dst_sw=0x000004,viro_dst_host=0x04 actions=viro_pop_fd,mod_dl_dst:e8:9d:87:cd:31:30,output:1
+ cookie=0x0, duration=6731.489s, table=0, n_packets=14, n_bytes=1484, idle_age=6715, viro,viro_dst_sw=0x000004,viro_dst_host=0x09 actions=viro_pop_fd,mod_dl_dst:e8:9d:87:cd:31:30,output:1
+ cookie=0x0, duration=6538.184s, table=0, n_packets=313, n_bytes=442398, idle_age=6214, viro,viro_dst_sw=0x000004,viro_dst_host=0x0a actions=viro_pop_fd,mod_dl_dst:e8:9d:87:cd:31:30,output:1
+ cookie=0x0, duration=3043.789s, table=0, n_packets=8444, n_bytes=12004672, idle_age=80, viro,viro_dst_sw=0x000004,viro_dst_host=0x12 actions=viro_pop_fd,mod_dl_dst:e8:9d:87:cd:31:30,output:1
+ cookie=0x0, duration=196248.396s, table=0, n_packets=36, n_bytes=3816, idle_age=65534, hard_age=65534, viro,viro_dst_sw=0x000004,viro_dst_host=0x02 actions=viro_pop_fd,mod_dl_dst:e8:9d:87:cd:31:30,output:1
+ cookie=0x0, duration=13934.341s, table=0, n_packets=178, n_bytes=60876, idle_age=9, priority=20,udp,tp_src=68,tp_dst=67 actions=controller(id=1)
+ cookie=0x0, duration=13934.341s, table=0, n_packets=673, n_bytes=40380, idle_age=4, priority=20,arp actions=controller(id=1)
+ cookie=0x0, duration=3094.517s, table=0, n_packets=3, n_bytes=206, idle_age=1180, priority=10,ip actions=controller(id=2),ANY
+ cookie=0x0, duration=8140.114s, table=0, n_packets=172, n_bytes=16596, idle_age=6714, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:09 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x3,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0x9,resubmit(,1)
+ cookie=0x0, duration=189374.321s, table=0, n_packets=36825, n_bytes=2628262, idle_age=65534, hard_age=65534, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:04 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x1,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0x4,resubmit(,1)
+ cookie=0x0, duration=187100.069s, table=0, n_packets=3640, n_bytes=258284, idle_age=65534, hard_age=65534, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:05 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x1,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0x5,resubmit(,1)
+ cookie=0x0, duration=1180.858s, table=0, n_packets=25021, n_bytes=1810292, idle_age=80, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:13 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x12,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0x13,resubmit(,1)
+ cookie=0x0, duration=2968.702s, table=0, n_packets=21198, n_bytes=1513088, idle_age=1181, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:12 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x12,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0x12,resubmit(,1)
+ cookie=0x0, duration=246112.297s, table=0, n_packets=327, n_bytes=32046, idle_age=65534, hard_age=65534, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:02 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x1,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0x2,resubmit(,1)
+ cookie=0x0, duration=4558.571s, table=0, n_packets=641, n_bytes=46687, idle_age=4542, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:0e actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x11,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0xe,resubmit(,1)
+ cookie=0x0, duration=246127.338s, table=0, n_packets=418, n_bytes=89384, idle_age=1006, hard_age=65534, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=01:00:5e:00:00:fb actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x1,viro_set_vid_sw_dst:0x1005e00,viro_set_vid_host_dst:0xfb,resubmit(,1)
+ cookie=0x0, duration=246126.32s, table=0, n_packets=750, n_bytes=56492, idle_age=2976, hard_age=65534, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=11:22:33:44:55:66 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x1,viro_set_vid_sw_dst:0x11223344,viro_set_vid_host_dst:0x5566,resubmit(,1)
+ cookie=0x0, duration=246127.452s, table=0, n_packets=38, n_bytes=2280, idle_age=3052, hard_age=65534, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=01:00:5e:00:00:16 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x1,viro_set_vid_sw_dst:0x1005e00,viro_set_vid_host_dst:0x16,resubmit(,1)
+ cookie=0x0, duration=190330.54s, table=0, n_packets=42797, n_bytes=3117858, idle_age=65534, hard_age=65534, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:03 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x1,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0x3,resubmit(,1)
+ cookie=0x0, duration=3043.904s, table=0, n_packets=3042, n_bytes=221521, idle_age=2969, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:11 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x12,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0x11,resubmit(,1)
+ cookie=0x0, duration=6538.349s, table=0, n_packets=6268, n_bytes=456725, idle_age=5109, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:0d actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0xa,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0xd,resubmit(,1)
+ cookie=0x0, duration=245289.043s, table=0, n_packets=2329, n_bytes=178230, idle_age=65534, hard_age=65534, priority=15,ip,dl_src=e8:9d:87:cd:31:30,dl_dst=00:00:00:05:00:01 actions=viro_push_fd(sw=0x8,host=0xa),viro_set_vid_sw_src:0x4,viro_set_vid_host_src:0x1,viro_set_vid_sw_dst:0x5,viro_set_vid_host_dst:0x1,resubmit(,1)
+ cookie=0x0, duration=3084.53s, table=1, n_packets=49261, n_bytes=3544901, idle_age=80, priority=15,ip,dl_dst=00:00:00:05:00:00/ff:ff:ff:ff:00:00 actions=output:4
+ cookie=0x0, duration=3094.517s, table=1, n_packets=10587, n_bytes=292845, idle_age=1, priority=10,viro actions=controller(id=2),ANY
+ cookie=0x0, duration=3084.53s, table=1, n_packets=0, n_bytes=0, idle_age=3084, priority=15,viro,viro_dst_sw=0x000005 actions=output:4
+

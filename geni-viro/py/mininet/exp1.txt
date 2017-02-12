@@ -1,0 +1,26 @@
+# VIRO network example
+#
+#                      remote ctrl
+#                         /   \
+#                        /     \  
+#                       /       \
+#      host1 ------- sw1 ======= sw2 ------- host2
+#                     |           |
+#                     |           |
+#                     |           |
+#                   ctrl1       ctrl2                 
+#
+# File Format:
+#   - lines starting with "#" are ignored
+#   - empty lines are ignored
+#   - edges are space separated e.g. "fromNode toNode"
+#   -  each edge is in the form "vid1 vid2", which is and edges between two switches with ids vid1, and vid2
+#
+# NOTE: Don't add repeated edges i.e. If one line is "1 2", then don't add "2 1"
+#
+# The "mininet-exp.py" attaches to each switch one host and one local viro controller, in addition, each switch
+# is connected to the remote viro controller. 
+# Hosts uses dhcp to retrieve their ip address. So, make sure your remote controller is running a dhcp server.
+#
+#
+1 2
