@@ -91,7 +91,7 @@ class RemoteViro(EventMixin):
     """ First check if the host is newly attached to another switch"""
     # Nov.2015
     self.numOfARP_REQUEST = self.numOfARP_REQUEST + 1
-    logging.info("ARP " + str(self.numOfARP_REQUEST) + " " + str(time.time()) + " R")
+    #logging.info("ARP " + str(self.numOfARP_REQUEST) + " " + str(time.time()) + " R")
     
 
     #log.info("Event.DPID {}".format(event.dpid))
@@ -116,7 +116,7 @@ class RemoteViro(EventMixin):
 
         # Notify local controller
         self.numOfVIRO_LOCAL_HOST = self.numOfVIRO_LOCAL_HOST+ 1
-        logging.info("LOCAL_HOST " + str(self.numOfVIRO_LOCAL_HOST) + " " + str(time.time()) + " S")
+        #logging.info("LOCAL_HOST " + str(self.numOfVIRO_LOCAL_HOST) + " " + str(time.time()) + " S")
 
         self.send_local_host(compareHost.mac, event.ip, newVID, event.port, compareSwitch)
 
@@ -145,7 +145,7 @@ class RemoteViro(EventMixin):
     """ Register a host """
     # Nov.2015
     self.numOfDHCP_REQUEST = self.numOfDHCP_REQUEST + 1
-    logging.info("DHCP " + str(self.numOfDHCP_REQUEST) + " " + str(time.time()) + " R")
+    #logging.info("DHCP " + str(self.numOfDHCP_REQUEST) + " " + str(time.time()) + " R")
 
     log.debug("handling dhcp lease event dpid=%s mac=%s ip=%s", dpidToStr(event.dpid), event.host_mac, event.ip)
     
@@ -159,7 +159,7 @@ class RemoteViro(EventMixin):
         
 
     self.numOfVIRO_LOCAL_HOST = self.numOfVIRO_LOCAL_HOST+ 1
-    logging.info("LOCAL_HOST " + str(self.numOfVIRO_LOCAL_HOST) + " " + str(time.time()) + " S")
+    #logging.info("LOCAL_HOST " + str(self.numOfVIRO_LOCAL_HOST) + " " + str(time.time()) + " S")
 
     # sending host information to the local controller
     self.send_local_host(hostMac, hostIp, hostVid, hostPort, sw)
@@ -172,7 +172,7 @@ class RemoteViro(EventMixin):
       sw.connection.send(msg)
       
       self.numOfVIRO_CONTROLLER_ECHO = self.numOfVIRO_CONTROLLER_ECHO + 1
-      logging.info("VIRO_CONTROLLER_ECHO " + str(self.numOfVIRO_CONTROLLER_ECHO) + " " + str(time.time()) + " S")
+      #logging.info("VIRO_CONTROLLER_ECHO " + str(self.numOfVIRO_CONTROLLER_ECHO) + " " + str(time.time()) + " S")
 
     log.debug("echo message sent")
 
@@ -199,7 +199,7 @@ class RemoteViro(EventMixin):
        # local control vid request message
        # assigns the VidAddress the the local host attached to sw
        self.numOfVIRO_VID_REQUEST = self.numOfVIRO_VID_REQUEST + 1
-       logging.info("VIRO_VID_REQUEST " + str(self.numOfVIRO_VID_REQUEST) + " " + str(time.time()) + " R")
+       #logging.info("VIRO_VID_REQUEST " + str(self.numOfVIRO_VID_REQUEST) + " " + str(time.time()) + " R")
 
        log.debug('Receiving VidRequest pkt from local controller')
        payload = ctrlpkt.payload
@@ -217,7 +217,7 @@ class RemoteViro(EventMixin):
 
     elif ctrlpkt.op == viroctrl.HOST_WITHDRAW:
       self.numOfVIRO_HOST_WITHDRAW = self.numOfVIRO_HOST_WITHDRAW + 1
-      logging.info("VIRO_HOST_WITHDRAW " + str(self.numOfVIRO_HOST_WITHDRAW) + " " + str(time.time()) + " R")
+      #logging.info("VIRO_HOST_WITHDRAW " + str(self.numOfVIRO_HOST_WITHDRAW) + " " + str(time.time()) + " R")
 
       log.debug('Receiving a failed host packet')
       host_ip = ctrlpkt.payload.failed_host

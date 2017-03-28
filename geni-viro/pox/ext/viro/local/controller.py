@@ -125,7 +125,7 @@ class LocalViro(EventMixin):
     # We don't use recurring timers to avoid function call overlaps in case of delays
     # So, we call the timer function after the end of the callback function
     Timer(LocalViro.DISCOVER_TIME, self.neibghoorDiscoverCallback)
-    Timer(LocalViro.FAILURE_TIME, self.discoveryFailureCallback) # comment here
+    #Timer(LocalViro.FAILURE_TIME, self.discoveryFailureCallback) # comment here
     
     self.round = 1
     Timer(LocalViro.UPDATE_RT_TIME, self.startRoundCallback)
@@ -166,7 +166,7 @@ class LocalViro(EventMixin):
           else: 
              # the removed port is connected to a switch
              log.debug("Discovered neibghor failed: starting VIRO failure recovery mechanism")
-             #self.discoveryFailure(port)  #uncomment here                               
+             self.discoveryFailure(port)  #uncomment here                               
 
 
   def _handle_ViroPacketInIP(self, event):
@@ -561,7 +561,7 @@ class LocalViro(EventMixin):
 
 
 
-      # Remove all the Gateways using the "failed node" as nexthop
+      # Remove all the Gateways using the "failed node" as nexthop (Fixme! simply this code)
       gw_entries = self.routing.rdvStore.findGWByNextHop(gw) # list of gateways using "failed node" as its nexthop
  
       delete_entries = []
@@ -590,9 +590,13 @@ class LocalViro(EventMixin):
                log.debug('Removed the failed gateway entry: {} from RDVStore per level'.format(gw_other))
 
 
+      # delete any remaining gateway using the failed nexthop - House Keeping
+      self.routing.rdvStore.deleteGatewayForNextHop(gw)
+
       # delete the failed gateway entry from the rdvRequestTracker - House Keeping
       for gw_other, dst in delete_entries:
-          del self.routing.rdvRequestTracker[gw_other][dst]                
+          del self.routing.rdvRequestTracker[gw_other][dst]  
+             
           log.debug('Removed the failed gateway entry: {} from rvd request-tracker'.format(gw_other))
 
 

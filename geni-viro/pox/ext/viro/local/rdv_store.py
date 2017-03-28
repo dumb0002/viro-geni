@@ -61,6 +61,20 @@ class RdvStore(object):
            del self.store[k][rdv]
            return 
 
+
+  def deleteGatewayForNextHop(self, nh):
+      entries = []
+
+      for k in self.store:
+        for rdv in self.store[k]:
+           if self.store[k][rdv].nh == nh:
+               entries.append((k, rdv))
+
+      for k, rdv in entries:
+          del self.store[k][rdv]
+
+
+   
   def deleteGateway(self, gw):
     entries = []
     

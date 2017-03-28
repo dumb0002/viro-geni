@@ -32,11 +32,11 @@ class rdv_withdraw(packet_base):
     assert isinstance(raw, bytes)
     self.raw = raw
     dlen = len(raw)
-    if dlen < rdv_reply.MIN_LEN:
+    if dlen < rdv_withdraw.MIN_LEN:
       self.msg('(rdv_withdraw parse) warning rdv_withdraw packet data too short to parse header: data len %u' % (dlen,))
       return
 
-    hdr = struct.unpack("!II", raw[:rdv_reply.MIN_LEN])
+    hdr = struct.unpack("!II", raw[:rdv_withdraw.MIN_LEN])
 
     self.bucket_dist = hdr[0]
     self.gw = VidAddr(hdr[1], 0)

@@ -40,6 +40,3 @@ class ViroHost(Host):
     self.detachScreen()
     self.disableIPv6()
     self.dhclient()
-  
-  def setMacAddress(self, mac):
-      self.setMAC(mac)

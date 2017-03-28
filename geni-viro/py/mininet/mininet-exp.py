@@ -89,8 +89,7 @@ def runExperiment(ifname):
 
   print "*** Initializing hosts"
   for h in hosts.itervalues():
-     #h.setMacAddress('00:14:4f:e2:b3:70')
-     h.initViroHost()
+    h.initViroHost()
     
 
   print "*** Running CLI"
