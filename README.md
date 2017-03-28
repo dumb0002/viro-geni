@@ -17,12 +17,19 @@ For example, to create a linear topology with three switches, the topology file 
 1 2
 2 3
 ```
+
 Then, you can do the following to start Mininet
 ```bash
 cd py/mininet
 source env-vars.sh
 sudo -E ./mininet-exp.py exp.txt
 ```
+
+##### Note:
+*  To create a VIRO topology in mininet, you have to append the prefix 1 in the VIRO vids because OVS doesn't recognize 000 (all zeros ) for the switch dpid. For example: node A has vid 000 (write as 1000), B has vid 010 (write as 1010)  and so on (see example at  https://github.com/dumb0002/viro-geni/blob/master/geni-viro/py/mininet/exp1.txt )
+
+* Decrease the mtu size for the host in a VIRO network, for example: sudo ifconfig  eth0 mtu 1400 
+
 Mininet will start and create the linear toplogy in <code>exp.txt</code>. Each will be attached to one host and one local controller.
 All switches will be connected to the remote controller. To change this behavior, you will need to change <code>mininet-exp.py</code> file.
 
@@ -64,3 +71,6 @@ To start the local controller on a VM hosting our VIRO OVS instance, you need to
 
 ##### Mininet Errors
 To force Mininet to kill all controllers and hosts, you can run `sudo ./stop.sh` from inside `py/mininet` directory.
+
+##### GENI
+We need to export our Mininet VM image and use that across all our GENI nodes. 
